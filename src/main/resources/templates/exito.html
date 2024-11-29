@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Registro Exitoso</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
+            body {
+                background-color: #f0f4f8;
+                font-family: 'Arial', sans-serif;
+            }
+            .success-container {
+                max-width: 600px;
+                margin: auto;
+                padding: 30px;
+                background-color: white;
+                border-radius: 15px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            h1 {
+                color: #28a745;
+                margin-bottom: 20px;
+            }
+            .success-icon {
+                font-size: 50px;
+                color: #28a745;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 1.1rem;
+                color: #555;
+            }
+            .strong-label {
+                font-weight: bold;
+                color: #333;
+            }
+            .btn-back {
+                margin-top: 20px;
+                background-color: #007bff;
+                color: white;
+            }
+            .btn-back:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container success-container mt-5">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h1>¡Registro Exitoso!</h1>
+            <hr>
+            <p><span class="strong-label">Nombre:</span> <span th:text="${alumno.nombre}"></span></p>
+            <p><span class="strong-label">Apellido Paterno:</span> <span th:text="${alumno.apellidoPaterno}"></span></p>
+            <p><span class="strong-label">Apellido Materno:</span> <span th:text="${alumno.apellidoMaterno}"></span></p>
+            <p><span class="strong-label">Fecha de Nacimiento:</span> <span th:text="${alumno.fechaNacimiento}"></span></p>
+            <p><span class="strong-label">Lugar de Residencia:</span> <span th:text="${alumno.lugarResidencia}"></span></p>
+            <p><span class="strong-label">Edad:</span> <span th:text="${alumno.edad}"></span></p>
+            <p><span class="strong-label">Teléfono:</span> <span th:text="${alumno.telefono}"></span></p>
+            <p><span class="strong-label">Correo Electrónico:</span> <span th:text="${alumno.correoElectronico}"></span></p>
+
+            <!-- Back Button -->
+            <a href="/registro" class="btn btn-back btn-block">Regresar al Formulario</a>
+        </div>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
